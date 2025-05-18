@@ -1,13 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
-  content: ["./src/**/*.{html,js}"],
+  content: ["./src/**/*.{html,js}", "./node_modules/flowbite/**/*.js"],
   theme: {
     fontFamily: {
-	    Kiwi: ['Kiwi Maru', 'sans-serif'],
+      Kiwi: ['Kiwi Maru', 'sans-serif'],
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')  // ←これも追加！
+  ],
 }
 

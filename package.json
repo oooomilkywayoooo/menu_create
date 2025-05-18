@@ -1,0 +1,23 @@
+{
+  "name": "menu-create",
+  "version": "1.0.0",
+  "main": "postcss.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oooomilkywayoooo/menu_create.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oooomilkywayoooo/menu_create/issues"
+  },
+  "homepage": "https://github.com/oooomilkywayoooo/menu_create#readme",
+  "description": "",
+  "dependencies": {
+    "flowbite": "^3.1.2"
+  }
+}
