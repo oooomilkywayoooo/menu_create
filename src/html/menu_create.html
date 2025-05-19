@@ -9,8 +9,8 @@
 
 <body class="bg-[#fdfbf7] font-Kiwi">
   <!-- サイドバー -->
-  <div class="grid grid-cols-12 gap-4 h-screen">
-    <div class="sidebar col-span-3 flex items-center justify-center">
+  <div class="grid grid-cols-12 gap-4">
+    <aside class="hidden md:flex items-center justify-center col-span-3">
       <div>
         <div class="m-3">
           <button
@@ -49,10 +49,10 @@
           </button>
         </div>
       </div>
-    </div>
+    </aside>
 
     <!-- メイン -->
-    <div class="main col-span-9 h-dvh">
+    <main class="col-span-9 h-dvh">
       <div class="grid grid-cols-8">
         <div class="col-start-1 col-span-6 text-center">
           <h1 class="mt-6 text-5xl font-black">1週間の献立を生成</h1>
@@ -200,7 +200,7 @@
           </button>
         </div>
       </form>
-    </div>
+    </main>
   </div>
 </body>
 
