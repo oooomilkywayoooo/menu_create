@@ -1611,6 +1611,10 @@ input:checked + .toggle-bg{
   grid-column: span 1 / span 1;
 }
 
+.col-span-2{
+  grid-column: span 2 / span 2;
+}
+
 .col-span-3{
   grid-column: span 3 / span 3;
 }
@@ -1623,14 +1627,6 @@ input:checked + .toggle-bg{
   grid-column: span 9 / span 9;
 }
 
-.col-span-2{
-  grid-column: span 2 / span 2;
-}
-
-.col-span-5{
-  grid-column: span 5 / span 5;
-}
-
 .col-start-1{
   grid-column-start: 1;
 }
@@ -1639,28 +1635,12 @@ input:checked + .toggle-bg{
   margin: 0.75rem;
 }
 
-.m-7{
-  margin: 1.75rem;
-}
-
-.m-6{
-  margin: 1.5rem;
-}
-
 .m-5{
   margin: 1.25rem;
 }
 
-.m-10{
-  margin: 2.5rem;
-}
-
 .m-8{
   margin: 2rem;
-}
-
-.m-9{
-  margin: 2.25rem;
 }
 
 .mx-8{
@@ -1674,6 +1654,10 @@ input:checked + .toggle-bg{
 
 .mb-2{
   margin-bottom: 0.5rem;
+}
+
+.mb-8{
+  margin-bottom: 2rem;
 }
 
 .me-2{
@@ -1700,16 +1684,8 @@ input:checked + .toggle-bg{
   margin-top: 1.5rem;
 }
 
-.mb-6{
-  margin-bottom: 1.5rem;
-}
-
 .mt-10{
   margin-top: 2.5rem;
-}
-
-.mb-8{
-  margin-bottom: 2rem;
 }
 
 .mt-7{
@@ -2107,16 +2083,6 @@ input:checked + .toggle-bg{
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-
-.text-4xl{
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-xl{
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 
 .font-black{
