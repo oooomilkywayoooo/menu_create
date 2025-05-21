@@ -6,25 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/dist/output.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/557c66cb53.js" crossorigin="anonymous"></script>
+  <title>献立生成画面</title>
 </head>
 
 <body class="bg-[#fdfbf7] font-Kiwi">
 
   <!-- ヘッダー タブレット・スマホのみ表示 -->
-  <header class="md:hidden h-24 bg-[#F2E9D7] flex items-center justify-end pr-5">
+  <header class="md:hidden h-16 bg-[#F2E9D7] flex items-center justify-end pr-4">
     <nav>
-      <button id="button" type="button" class="fixed z-10 top-5 right-5">
-      <i id="bars" class="fa-solid fa-bars fa-3x"></i>
-      <i id="xmark" class="fa-solid fa-xmark fa-3x !hidden"></i>
+      <button id="button" type="button" class="fixed z-10 top-4 right-4">
+      <i id="bars" class="fa-solid fa-bars fa-2x"></i>
+      <i id="xmark" class="fa-solid fa-xmark fa-2x !hidden"></i>
     </button>
     <ul id="menu" class="z-0 fixed top-0 left-0 w-full text-center bg-[#FFE79F] font-bold
     translate-x-full transition ease-linear">
-      <li class="p-2"><a href="">ホーム</a></li>
-      <li class="p-2"><a href="">料理登録</a></li>
-      <li class="p-2"><a href="">献立</a></li>
-      <li class="p-2"><a href="">買い物リスト</a></li>
-      <li class="p-2"><a href="">お気に入り</a></li>
-      <li class="p-2"><a href="">献立履歴</a></li>
+      <li class="p-2"><a href="/src/html/menu_create.html">ホーム</a></li>
+      <li class="p-2"><a href="/src/html/add_cooking.html">料理登録</a></li>
+      <li class="p-2"><a href="/src/html/one_week_menu.html">献立</a></li>
+      <li class="p-2"><a href="/src/html/shopping_list.html">買い物リスト</a></li>
+      <li class="p-2"><a href="/src/html/favorite.html">お気に入り</a></li>
+      <li class="p-2"><a href="/src/html/menu_history.html">献立履歴</a></li>
     </ul>
     </nav>
   </header>
@@ -34,40 +35,40 @@
     <aside class="hidden md:flex items-center justify-center col-span-3">
       <div>
         <div class="m-3">
-          <button
+          <a href="/src/html/menu_create.html"
             class="w-20 h-20  bg-[#E7DBDA] text-white font-semibold rounded-full hover:bg-[#e8c7c5] flex items-center justify-center">
             <img class="w-14 h-14" src="/src/images/sidebar-icon/sidebar_home.png" alt="ホームボタン">
-          </button>
+          </a>
         </div>
         <div class="m-3">
-          <button
+          <a href="/src/html/add_cooking.html"
             class="w-20 h-20  bg-[#E7DBDA] text-white font-semibold rounded-full hover:bg-[#e8c7c5] flex items-center justify-center">
             <img class="w-14 h-14" src="/src/images/sidebar-icon/sidebar_add.png" alt="料理追加ボタン">
-          </button>
+          </a>
         </div>
         <div class="m-3">
-          <button
+          <a href="/src/html/one_week_menu.html"
             class="w-20 h-20  bg-[#E7DBDA] text-white font-semibold rounded-full hover:bg-[#e8c7c5] flex items-center justify-center">
-            <img class="w-14 h-14" src="/src/images/sidebar-icon/sidebar_dinner.png" alt="料理追加ボタン">
-          </button>
+            <img class="w-14 h-14" src="/src/images/sidebar-icon/sidebar_dinner.png" alt="献立ボタン">
+          </a>
         </div>
         <div class="m-3">
-          <button
+          <a href="/src/html/shopping_list.html"
             class="w-20 h-20  bg-[#E7DBDA] text-white font-semibold rounded-full hover:bg-[#e8c7c5] flex items-center justify-center">
-            <img class="w-14 h-14" src="/src/images/sidebar-icon/sidebar_list.png" alt="料理追加ボタン">
-          </button>
+            <img class="w-14 h-14" src="/src/images/sidebar-icon/sidebar_list.png" alt="買い物リストボタン">
+          </a>
         </div>
         <div class="m-3">
-          <button
+          <a href="/src/html/favorite.html"
             class="w-20 h-20  bg-[#E7DBDA] text-white font-semibold rounded-full hover:bg-[#e8c7c5] flex items-center justify-center">
-            <img class="w-14 h-14" src="/src/images/sidebar-icon/sidebar_star.png" alt="料理追加ボタン">
-          </button>
+            <img class="w-14 h-14" src="/src/images/sidebar-icon/sidebar_star.png" alt="お気に入りボタン">
+          </a>
         </div>
         <div class="m-3">
-          <button
+          <a href="/src/html/menu_history.html"
             class="w-20 h-20  bg-[#E7DBDA] text-white font-semibold rounded-full hover:bg-[#e8c7c5] flex items-center justify-center">
-            <img class="w-14 h-14" src="/src/images/sidebar-icon/sidebar_history.png" alt="料理追加ボタン">
-          </button>
+            <img class="w-14 h-14" src="/src/images/sidebar-icon/sidebar_history.png" alt="献立履歴ボタン">
+          </a>
         </div>
       </div>
     </aside>
@@ -76,27 +77,27 @@
     <main class="col-span-12 md:col-span-9 h-dvh">
       <div class="md:grid grid-cols-8 text-center">
         <div class="col-start-1 col-span-6 text-center">
-          <h1 class="mt-6 text-4xl md:text-5xl font-black">1週間の献立を生成</h1>
+          <h1 class="mt-6 text-3xl md:text-5xl font-black">1週間の献立を生成</h1>
         </div>
       </div>
 
       <!-- 献立フォーム -->
       <form action="">
-        <div class="grid grid-cols-12 gap-4 mt-10">
+        <div class="grid grid-cols-12 gap-4 mt-5 md:mt-10">
           <!-- 月曜日 -->
           <div class="col-start-2 col-span-1 md:col-start-1">
-            <p class="text-3xl">月</p>
+            <p class="text-xl md:text-3xl">月</p>
           </div>
           <!-- ジャンルアイコン -->
           <div class="col-span-1">
-            <div class="w-[36px] aspect-[1/1]">
+            <div class="w-[26px] md:w-[36px] aspect-[1/1]">
               <img class="w-full h-full object-cover" src="/src/images/junre-icon/genre_fish.png" alt="魚料理">
             </div>
           </div>
           <!-- テキストエリア -->
           <div class="col-span-8 md:col-span-9">
             <input type="text" id="text"
-              class="border border-gray-300 text-lg rounded-lg focus:ring-[#FDC3AA] focus:border-[#FDC3AA] block w-full p-2.5 placeholder-gray-300"
+              class="border border-gray-300 text-xs md:text-lg rounded-lg focus:ring-[#FDC3AA] focus:border-[#FDC3AA] block w-full p-2.5 placeholder-gray-300"
               placeholder="食べたい料理を入力" required />
           </div>
         </div>
@@ -104,18 +105,18 @@
         <div class="grid grid-cols-12 gap-4 mt-7">
           <!-- 火曜日 -->
           <div class="col-start-2 col-span-1 md:col-start-1">
-            <p class="text-3xl">火</p>
+            <p class="text-xl md:text-3xl">火</p>
           </div>
           <!-- ジャンルアイコン -->
           <div class="col-span-1">
-            <div class="w-[36px] aspect-[1/1]">
+            <div class="w-[26px] md:w-[36px] aspect-[1/1]">
               <img class="w-full h-full object-cover" src="/src/images/junre-icon/genre_fried.png" alt="揚げ物">
             </div>
           </div>
           <!-- テキストエリア -->
           <div class="col-span-8 md:col-span-9">
             <input type="text" id="text"
-              class="border border-gray-300 text-lg rounded-lg focus:ring-[#FDC3AA] focus:border-[#FDC3AA] block w-full p-2.5 placeholder-gray-300"
+              class="border border-gray-300 text-xs md:text-lg rounded-lg focus:ring-[#FDC3AA] focus:border-[#FDC3AA] block w-full p-2.5 placeholder-gray-300"
               placeholder="食べたい料理を入力" required />
           </div>
         </div>
@@ -123,18 +124,18 @@
         <div class="grid grid-cols-12 gap-4 mt-7">
           <!-- 水曜日 -->
           <div class="col-start-2 col-span-1 md:col-start-1">
-            <p class="text-3xl">水</p>
+            <p class="text-xl md:text-3xl">水</p>
           </div>
           <!-- ジャンルアイコン -->
           <div class="col-span-1">
-            <div class="w-[36px] aspect-[1/1]">
+            <div class="w-[26px] md:w-[36px] aspect-[1/1]">
               <img class="w-full h-full object-cover" src="/src/images/junre-icon/genre_bake.png" alt="焼き物">
             </div>
           </div>
           <!-- テキストエリア -->
           <div class="col-span-8 md:col-span-9">
             <input type="text" id="text"
-              class="border border-gray-300 text-lg rounded-lg focus:ring-[#FDC3AA] focus:border-[#FDC3AA] block w-full p-2.5 placeholder-gray-300"
+              class="border border-gray-300 text-xs md:text-lg rounded-lg focus:ring-[#FDC3AA] focus:border-[#FDC3AA] block w-full p-2.5 placeholder-gray-300"
               placeholder="食べたい料理を入力" required />
           </div>
         </div>
@@ -142,18 +143,18 @@
         <div class="grid grid-cols-12 gap-4 mt-7">
           <!-- 木曜日 -->
           <div class="col-start-2 col-span-1 md:col-start-1">
-            <p class="text-3xl">木</p>
+            <p class="text-xl md:text-3xl">木</p>
           </div>
           <!-- ジャンルアイコン -->
           <div class="col-span-1">
-            <div class="w-[36px] aspect-[1/1]">
+            <div class="w-[26px] md:w-[36px] aspect-[1/1]">
               <img class="w-full h-full object-cover" src="/src/images/junre-icon/genre_noodles.png" alt="麺料理">
             </div>
           </div>
           <!-- テキストエリア -->
           <div class="col-span-8 md:col-span-9">
             <input type="text" id="text"
-              class="border border-gray-300 text-lg rounded-lg focus:ring-[#FDC3AA] focus:border-[#FDC3AA] block w-full p-2.5 placeholder-gray-300"
+              class="border border-gray-300 text-xs md:text-lg rounded-lg focus:ring-[#FDC3AA] focus:border-[#FDC3AA] block w-full p-2.5 placeholder-gray-300"
               placeholder="食べたい料理を入力" required />
           </div>
         </div>
@@ -161,18 +162,18 @@
         <div class="grid grid-cols-12 gap-4 mt-7">
           <!-- 金曜日 -->
           <div class="col-start-2 col-span-1 md:col-start-1">
-            <p class="text-3xl">金</p>
+            <p class="text-xl md:text-3xl">金</p>
           </div>
           <!-- ジャンルアイコン -->
           <div class="col-span-1">
-            <div class="w-[36px] aspect-[1/1]">
+            <div class="w-[26px] md:w-[36px] aspect-[1/1]">
               <img class="w-full h-full object-cover" src="/src/images/junre-icon/genre_don.png" alt="丼もの">
             </div>
           </div>
           <!-- テキストエリア -->
           <div class="col-span-8 md:col-span-9">
             <input type="text" id="text"
-              class="border border-gray-300 text-lg rounded-lg focus:ring-[#FDC3AA] focus:border-[#FDC3AA] block w-full p-2.5 placeholder-gray-300"
+              class="border border-gray-300 text-xs md:text-lg rounded-lg focus:ring-[#FDC3AA] focus:border-[#FDC3AA] block w-full p-2.5 placeholder-gray-300"
               placeholder="食べたい料理を入力" required />
           </div>
         </div>
@@ -180,18 +181,18 @@
         <div class="grid grid-cols-12 gap-4 mt-7">
           <!-- 土曜日 -->
           <div class="col-start-2 col-span-1 md:col-start-1">
-            <p class="text-3xl">土</p>
+            <p class="text-xl md:text-3xl">土</p>
           </div>
           <!-- ジャンルアイコン -->
           <div class="col-span-1">
-            <div class="w-[36px] aspect-[1/1]">
+            <div class="w-[26px] md:w-[36px] aspect-[1/1]">
               <img class="w-full h-full object-cover" src="/src/images/junre-icon/genre_other.png" alt="リクエスト">
             </div>
           </div>
           <!-- テキストエリア -->
           <div class="col-span-8 md:col-span-9">
             <input type="text" id="text"
-              class="border border-gray-300 text-lg rounded-lg focus:ring-[#FDC3AA] focus:border-[#FDC3AA] block w-full p-2.5 placeholder-gray-300"
+              class="border border-gray-300 text-xs md:text-lg rounded-lg focus:ring-[#FDC3AA] focus:border-[#FDC3AA] block w-full p-2.5 placeholder-gray-300"
               placeholder="食べたい料理を入力" required />
           </div>
         </div>
@@ -199,18 +200,18 @@
         <div class="grid grid-cols-12 gap-4 mt-7">
           <!-- 日曜日 -->
           <div class="col-start-2 col-span-1 md:col-start-1">
-            <p class="text-3xl">日</p>
+            <p class="text-xl md:text-3xl">日</p>
           </div>
           <!-- ジャンルアイコン -->
           <div class="col-span-1">
-            <div class="w-[36px] aspect-[1/1]">
+            <div class="w-[26px] md:w-[36px] aspect-[1/1]">
               <img class="w-full h-full object-cover" src="/src/images/junre-icon/genre_other.png" alt="リクエスト">
             </div>
           </div>
           <!-- テキストエリア -->
           <div class="col-span-8 md:col-span-9">
             <input type="text" id="text"
-              class="border border-gray-300 text-lg rounded-lg focus:ring-[#FDC3AA] focus:border-[#FDC3AA] block w-full p-2.5 placeholder-gray-300"
+              class="border border-gray-300 text-xs md:text-lg rounded-lg focus:ring-[#FDC3AA] focus:border-[#FDC3AA] block w-full p-2.5 placeholder-gray-300"
               placeholder="食べたい料理を入力" required />
           </div>
         </div>
@@ -225,9 +226,9 @@
         </div>
         <!-- 生成ボタン スマホ用 -->
         <div class="md:hidden grid grid-cols-12 gap-4">
-          <div class="col-span-6 col-start-4 flex justify-center">
+          <div class="col-span-8 col-start-3 flex justify-center">
             <button type="button"
-              class="text-white bg-[#F9C7C0] focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-2xl px-10 py-2.5 my-5">
+              class="text-white bg-[#F9C7C0] focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-2xl px-10 py-4 my-4">
               献立を生成
             </button>
           </div>
