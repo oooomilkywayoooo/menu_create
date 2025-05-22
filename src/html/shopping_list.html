@@ -1,13 +1,163 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/dist/output.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/557c66cb53.js" crossorigin="anonymous"></script>
+  <title>買い物リスト画面</title>
 </head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+
+<body class="bg-[#fdfbf7] font-Kiwi">
+
+  <!-- ヘッダー タブレット・スマホのみ表示 -->
+  <header class="md:hidden h-16 bg-[#F2E9D7] flex items-center justify-end pr-4">
+    <nav>
+      <button id="button" type="button" class="fixed z-10 top-4 right-4">
+        <i id="bars" class="fa-solid fa-bars fa-2x"></i>
+        <i id="xmark" class="fa-solid fa-xmark fa-2x !hidden"></i>
+      </button>
+      <ul id="menu" class="z-0 fixed top-0 left-0 w-full text-center bg-[#FFE79F] font-bold
+    translate-x-full transition ease-linear">
+        <li class="p-2"><a href="/src/html/menu_create.html">ホーム</a></li>
+        <li class="p-2"><a href="/src/html/add_cooking.html">料理登録</a></li>
+        <li class="p-2"><a href="/src/html/one_week_menu.html">献立</a></li>
+        <li class="p-2"><a href="/src/html/shopping_list.html">買い物リスト</a></li>
+        <li class="p-2"><a href="/src/html/favorite.html">お気に入り</a></li>
+        <li class="p-2"><a href="/src/html/menu_history.html">献立履歴</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- サイドバー -->
+  <div class="grid grid-cols-12 gap-4">
+    <aside class="hidden md:flex items-center justify-center col-span-3">
+      <div>
+        <div class="m-3">
+          <a href="/src/html/menu_create.html"
+            class="w-20 h-20  bg-[#E7DBDA] text-white font-semibold rounded-full hover:bg-[#e8c7c5] flex items-center justify-center">
+            <img class="w-14 h-14" src="/src/images/sidebar-icon/sidebar_home.png" alt="ホームボタン">
+          </a>
+        </div>
+        <div class="m-3">
+          <a href="/src/html/add_cooking.html"
+            class="w-20 h-20  bg-[#E7DBDA] text-white font-semibold rounded-full hover:bg-[#e8c7c5] flex items-center justify-center">
+            <img class="w-14 h-14" src="/src/images/sidebar-icon/sidebar_add.png" alt="料理追加ボタン">
+          </a>
+        </div>
+        <div class="m-3">
+          <a href="/src/html/one_week_menu.html"
+            class="w-20 h-20  bg-[#E7DBDA] text-white font-semibold rounded-full hover:bg-[#e8c7c5] flex items-center justify-center">
+            <img class="w-14 h-14" src="/src/images/sidebar-icon/sidebar_dinner.png" alt="献立ボタン">
+          </a>
+        </div>
+        <div class="m-3">
+          <a href="/src/html/shopping_list.html"
+            class="w-20 h-20  bg-[#E7DBDA] text-white font-semibold rounded-full hover:bg-[#e8c7c5] flex items-center justify-center">
+            <img class="w-14 h-14" src="/src/images/sidebar-icon/sidebar_list.png" alt="買い物リストボタン">
+          </a>
+        </div>
+        <div class="m-3">
+          <a href="/src/html/favorite.html"
+            class="w-20 h-20  bg-[#E7DBDA] text-white font-semibold rounded-full hover:bg-[#e8c7c5] flex items-center justify-center">
+            <img class="w-14 h-14" src="/src/images/sidebar-icon/sidebar_star.png" alt="お気に入りボタン">
+          </a>
+        </div>
+        <div class="m-3">
+          <a href="/src/html/menu_history.html"
+            class="w-20 h-20  bg-[#E7DBDA] text-white font-semibold rounded-full hover:bg-[#e8c7c5] flex items-center justify-center">
+            <img class="w-14 h-14" src="/src/images/sidebar-icon/sidebar_history.png" alt="献立履歴ボタン">
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- メイン -->
+    <main class="col-span-12 md:col-span-9 h-dvh">
+      <div class="md:grid grid-cols-8 text-center">
+        <div class="col-start-1 col-span-6 text-center">
+          <h1 class="mt-6 text-3xl md:text-5xl font-black">買い物リスト</h1>
+        </div>
+      </div>
+
+      <!-- 買うもの -->
+      <div class="grid grid-cols-12 gap-4 mt-5 md:mt-10 flex items-center">
+        <div class="col-start-2 col-span-3 md:col-start-1">
+          <p class="text-xl md:text-3xl font-bold">買うもの</p>
+        </div>
+        <div class="col-start-2 col-span-3 md:col-start-8 flex justify-end">
+          <button type="button"
+            class="text-white bg-[#FDC3AA] hover:bg-[#f79f79] focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-2xl px-5 py-2.5 me-2 mb-2">
+            <i class="fa-solid fa-circle-plus"></i>
+            追加
+          </button>
+        </div>
+      </div>
+
+      <!-- チェックリスト -->
+      <div class="grid grid-cols-12 gap-4 mt-5">
+        <div class="col-start-2 col-span-10 md:col-start-1">
+          <div class="flex items-center ps-4 border border-gray-200 rounded-sm dark:border-gray-700">
+            <input id="bordered-checkbox-1" type="checkbox" value="" name="bordered-checkbox"
+              class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <label for="bordered-checkbox-1"
+              class="w-full py-4 ms-2 text-2xl text-[#000000]">玉ねぎ</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-12 gap-4 mt-5">
+        <div class="col-start-2 col-span-10 md:col-start-1">
+          <div class="flex items-center ps-4 border border-gray-200 rounded-sm dark:border-gray-700">
+            <input id="bordered-checkbox-1" type="checkbox" value="" name="bordered-checkbox"
+              class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <label for="bordered-checkbox-1"
+              class="w-full py-4 ms-2 text-2xl text-[#000000]">にんじん</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- 購入済み -->
+      <div class="grid grid-cols-12 gap-4 mt-5 md:mt-10">
+        <div class="col-start-2 col-span-3 md:col-start-1">
+          <p class="text-xl md:text-3xl font-bold">購入済み</p>
+        </div>
+      </div>
+
+      <!-- チェックリスト -->
+      <div class="grid grid-cols-12 gap-4 mt-5">
+        <div class="col-start-2 col-span-10 md:col-start-1">
+          <div class="flex items-center ps-4 border border-gray-200 rounded-sm dark:border-gray-700">
+            <input id="bordered-checkbox-1" type="checkbox" value="" name="bordered-checkbox"
+              class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <label for="bordered-checkbox-1"
+              class="w-full py-4 ms-2 text-2xl text-[#000000]">牛乳</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-12 gap-4 mt-5">
+        <div class="col-start-2 col-span-10 md:col-start-1">
+          <div class="flex items-center ps-4 border border-gray-200 rounded-sm dark:border-gray-700">
+            <input id="bordered-checkbox-1" type="checkbox" value="" name="bordered-checkbox"
+              class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <label for="bordered-checkbox-1"
+              class="w-full py-4 ms-2 text-2xl text-[#000000]">ヨーグルト</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- ハンバーガーメニューのJS -->
+      <script>
+        button.addEventListener('click', event => {
+          bars.classList.toggle('!hidden');
+          xmark.classList.toggle('!hidden');
+          menu.classList.toggle('translate-x-full');
+        })
+      </script>
+    </main>
+  </div>
 </body>
+
 </html>
