@@ -4,10 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/dist/output.css" rel="stylesheet">
+  <script src="/node_modules/flowbite/dist/flowbite.min.js"></script>
+  <script src="https://kit.fontawesome.com/557c66cb53.js" crossorigin="anonymous"></script>
+  <title>料理登録画面</title>
 </head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+<body class="p-8">
+
+  <div class="max-w-md mx-auto">
+    
+    <div class="flex items-center space-x-2">
+      <!-- ファイル名表示 -->
+      <input
+        type="text"
+        id="filename_display"
+        placeholder="ファイルが選択されていません"
+        class="flex-1 text-sm border border-gray-300 rounded-lg px-3 py-2 bg-white"
+        readonly
+      >
+
+      <!-- カスタム参照ボタン -->
+      <label
+        for="file_input"
+        class="inline-block px-4 py-2 text-white bg-blue-600 rounded-lg cursor-pointer hover:bg-blue-700 text-sm"
+      >
+        参照
+      </label>
+    </div>
+
+    <!-- 実際のファイル入力（非表示） -->
+    <input
+      type="file"
+      id="file_input"
+      class="hidden"
+      onchange="document.getElementById('filename_display').value = this.files[0]?.name || ''"
+    >
+  </div>
+
 </body>
 </html>
